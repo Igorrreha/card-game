@@ -2,5 +2,6 @@ class_name CardBattleAction
 extends Resource
 
 
-func do():
+func do(actor, opponents, battle_field: CardBattleField):
 	pass
+

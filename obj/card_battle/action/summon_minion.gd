@@ -10,5 +10,5 @@ extends CardBattleAction
 		push_error("Minion configuration is not MinionConfiguration type")
 
 
-func do():
+func do(actor, opponents, battle_field):
 	pass

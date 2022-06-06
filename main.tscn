@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://q0cwya0ecpry"]
+[gd_scene load_steps=5 format=3 uid="uid://bptyo4acexbgm"]
 
-[ext_resource type="PackedScene" uid="uid://0vkabsmi5mk3" path="res://obj/ui/card_battle/character_info/character_info.tscn" id="1_cepv7"]
-[ext_resource type="PackedScene" uid="uid://bpvuwttxpci8d" path="res://obj/ui/card_battle/battle_field/battle_field.tscn" id="2_c46e4"]
-[ext_resource type="PackedScene" uid="uid://c5mv61awxomkm" path="res://obj/ui/card_battle/cards_list/cards_list.tscn" id="3_fbjvv"]
+[ext_resource type="PackedScene" uid="uid://0vkabsmi5mk3" path="res://obj/card_battle/ui/character_info/character_info.tscn" id="1_cepv7"]
+[ext_resource type="PackedScene" path="res://obj/card_battle/ui/battle_field/battle_field.tscn" id="2_c46e4"]
+[ext_resource type="PackedScene" uid="uid://c5mv61awxomkm" path="res://obj/card_battle/ui/cards_list/cards_list.tscn" id="3_fbjvv"]
 [ext_resource type="Script" path="res://system/card_battle/duel_starter.gd" id="4_51dor"]
 
 [node name="Main" type="Node"]
