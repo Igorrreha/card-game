@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c5mv61awxomkm"]
+
+[node name="Cards" type="HBoxContainer"]
+offset_left = 64.0
+offset_top = 104.0
+offset_right = 476.0
+offset_bottom = 254.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Card" type="ColorRect" parent="."]
+minimum_size = Vector2(100, 150)
+offset_right = 100.0
+offset_bottom = 150.0
+
+[node name="Card2" type="ColorRect" parent="."]
+minimum_size = Vector2(100, 150)
+offset_left = 104.0
+offset_right = 204.0
+offset_bottom = 150.0
+
+[node name="Card3" type="ColorRect" parent="."]
+minimum_size = Vector2(100, 150)
+offset_left = 208.0
+offset_right = 308.0
+offset_bottom = 150.0
+
+[node name="Card4" type="ColorRect" parent="."]
+minimum_size = Vector2(100, 150)
+offset_left = 312.0
+offset_right = 412.0
+offset_bottom = 150.0
+color = Color(1, 0.0862745, 0.470588, 1)

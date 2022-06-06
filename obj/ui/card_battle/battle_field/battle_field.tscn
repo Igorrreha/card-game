@@ -1,0 +1,103 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpvuwttxpci8d"]
+
+[ext_resource type="PackedScene" uid="uid://c3ieojs2wys6" path="res://obj/ui/card_battle/battle_field/cell/battle_field_cell.tscn" id="1_01xkm"]
+
+[node name="BattleField" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+columns = 3
+
+[node name="BattleFieldCell" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 178.0
+offset_bottom = 237.0
+
+[node name="BattleFieldCell2" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 182.0
+offset_right = 359.0
+offset_bottom = 237.0
+
+[node name="BattleFieldCell3" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 363.0
+offset_right = 540.0
+offset_bottom = 237.0
+
+[node name="BattleFieldCell4" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 241.0
+offset_right = 178.0
+offset_bottom = 478.0
+
+[node name="BattleFieldCell5" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 182.0
+offset_top = 241.0
+offset_right = 359.0
+offset_bottom = 478.0
+
+[node name="BattleFieldCell6" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 363.0
+offset_top = 241.0
+offset_right = 540.0
+offset_bottom = 478.0
+
+[node name="BattleFieldCell7" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 482.0
+offset_right = 178.0
+offset_bottom = 719.0
+
+[node name="BattleFieldCell8" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 182.0
+offset_top = 482.0
+offset_right = 359.0
+offset_bottom = 719.0
+
+[node name="BattleFieldCell9" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 363.0
+offset_top = 482.0
+offset_right = 540.0
+offset_bottom = 719.0
+
+[node name="BattleFieldCell10" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 723.0
+offset_right = 178.0
+offset_bottom = 960.0
+
+[node name="BattleFieldCell11" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 182.0
+offset_top = 723.0
+offset_right = 359.0
+offset_bottom = 960.0
+
+[node name="BattleFieldCell12" parent="GridContainer" instance=ExtResource( "1_01xkm" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 363.0
+offset_top = 723.0
+offset_right = 540.0
+offset_bottom = 960.0
