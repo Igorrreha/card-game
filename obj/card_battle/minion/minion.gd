@@ -21,6 +21,10 @@ func get_direction() -> Vector2i:
 	return _direction
 
 
+func apply_damage(damage: int):
+	_current_health = clamp(_current_health - damage, 0, _max_health)
+
+
 func _init(owner: CardBattleHero, position: Vector2i):
 	_owner = owner
 	_position = position
