@@ -12,3 +12,4 @@ var _card_pack: Array[Card]
 
 func apply_damage(damage: int):
 	_current_health = clamp(_current_health - damage, 0, _max_health)
+

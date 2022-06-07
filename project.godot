@@ -24,6 +24,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://obj/card_battle/action/utils.gd"
 }, {
+"base": "RefCounted",
+"class": &"CardBattleEvents",
+"language": &"GDScript",
+"path": "res://obj/card_battle/events.gd"
+}, {
 "base": "Object",
 "class": &"CardBattleField",
 "language": &"GDScript",
@@ -48,6 +53,7 @@ _global_script_class_icons={
 "Card": "",
 "CardBattleAction": "",
 "CardBattleActionUtils": "",
+"CardBattleEvents": "",
 "CardBattleField": "",
 "CardBattleHero": "",
 "CardBattleMinion": "",

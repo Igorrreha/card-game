@@ -4,7 +4,7 @@ extends CardBattleAction
 @export var _damage: int
 
 
-func do(actor: CardBattleMinion, opponents: Array[CardBattleHero], battle_field: CardBattleField):
+func do(actor: CardBattleMinion, opponents, battle_field):
 	if _try_apply_damage_to_cells(actor, battle_field):
 		return
 	
