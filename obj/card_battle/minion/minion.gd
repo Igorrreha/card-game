@@ -3,17 +3,18 @@ extends Object
 
 
 var _owner: CardBattleHero
-var _position: Vector2i
+var _position: CardBattleField.Cell
 var _direction: Vector2i
 var _max_health: int
 var _current_health: int
+var _configuration: CardBattleMinionConfiguration
 
 
 func get_owner() -> CardBattleHero:
 	return _owner
 
 
-func get_position() -> Vector2i:
+func get_position() -> CardBattleField.Cell:
 	return _position
 
 
@@ -25,6 +26,7 @@ func apply_damage(damage: int):
 	_current_health = clamp(_current_health - damage, 0, _max_health)
 
 
-func _init(owner: CardBattleHero, position: Vector2i):
+func _init(configuration: CardBattleMinionConfiguration, owner: CardBattleHero,
+		position: CardBattleField.Cell):
 	_owner = owner
 	_position = position

@@ -1,4 +1,4 @@
-class_name MinionConfiguration
+class_name CardBattleMinionConfiguration
 extends Resource
 
 

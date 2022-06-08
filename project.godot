@@ -20,11 +20,6 @@ _global_script_classes=[{
 "path": "res://obj/card_battle/action/action.gd"
 }, {
 "base": "RefCounted",
-"class": &"CardBattleActionUtils",
-"language": &"GDScript",
-"path": "res://obj/card_battle/action/utils.gd"
-}, {
-"base": "RefCounted",
 "class": &"CardBattleEvents",
 "language": &"GDScript",
 "path": "res://obj/card_battle/events.gd"
@@ -45,19 +40,18 @@ _global_script_classes=[{
 "path": "res://obj/card_battle/minion/minion.gd"
 }, {
 "base": "Resource",
-"class": &"MinionConfiguration",
+"class": &"CardBattleMinionConfiguration",
 "language": &"GDScript",
 "path": "res://obj/card_battle/minion/minion_configuration.gd"
 }]
 _global_script_class_icons={
 "Card": "",
 "CardBattleAction": "",
-"CardBattleActionUtils": "",
 "CardBattleEvents": "",
 "CardBattleField": "",
 "CardBattleHero": "",
 "CardBattleMinion": "",
-"MinionConfiguration": ""
+"CardBattleMinionConfiguration": ""
 }
 
 [application]
