@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://c1s6aj6ya542h"]
 
-[ext_resource type="PackedScene" path="res://obj/card_battle/ui/battle_field/cell/battle_field_cell.tscn" id="1_01xkm"]
+[ext_resource type="PackedScene" uid="uid://c3ieojs2wys6" path="res://obj/card_battle/ui/battle_field/cell/battle_field_cell.tscn" id="1_01xkm"]
 
 [node name="BattleField" type="Control"]
 anchor_right = 1.0

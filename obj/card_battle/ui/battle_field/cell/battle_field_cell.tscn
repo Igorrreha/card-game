@@ -1,4 +1,11 @@
-[gd_scene format=3 uid="uid://c3ieojs2wys6"]
+[gd_scene load_steps=3 format=3 uid="uid://c3ieojs2wys6"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_l4ots"]
+
+[sub_resource type="NoiseTexture" id="NoiseTexture_cjlxe"]
+width = 32
+height = 32
+noise = SubResource( "FastNoiseLite_l4ots" )
 
 [node name="BattleFieldCell" type="Control"]
 minimum_size = Vector2(100, 100)
@@ -9,6 +16,13 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="Minon" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( "NoiseTexture_cjlxe" )
+ignore_texture_size = true
+stretch_mode = 5

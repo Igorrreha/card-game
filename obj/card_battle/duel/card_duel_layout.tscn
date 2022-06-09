@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdi76rdok4a0f"]
+
+[ext_resource type="PackedScene" uid="uid://0vkabsmi5mk3" path="res://obj/card_battle/ui/character_info/character_info.tscn" id="1_xkd7c"]
+[ext_resource type="PackedScene" uid="uid://c1s6aj6ya542h" path="res://obj/card_battle/ui/battle_field/battle_field.tscn" id="2_igcib"]
+[ext_resource type="PackedScene" uid="uid://c5mv61awxomkm" path="res://obj/card_battle/ui/cards_list/cards_list.tscn" id="3_3qgip"]
+
+[node name="CardDuelLayout" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Character" parent="VBoxContainer" instance=ExtResource( "1_xkd7c" )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 540.0
+offset_bottom = 100.0
+
+[node name="BattleField" parent="VBoxContainer" instance=ExtResource( "2_igcib" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 104.0
+offset_right = 540.0
+offset_bottom = 702.0
+
+[node name="Character2" parent="VBoxContainer" instance=ExtResource( "1_xkd7c" )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 706.0
+offset_right = 540.0
+offset_bottom = 806.0
+
+[node name="Cards" parent="VBoxContainer" instance=ExtResource( "3_3qgip" )]
+offset_top = 810.0
+offset_bottom = 960.0

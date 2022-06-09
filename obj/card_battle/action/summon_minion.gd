@@ -22,3 +22,4 @@ func do(actor: CardBattleHero, opponents, battle_field):
 			var target_cell = battle_field.get_selected_cell()
 			var minion = CardBattleMinion.new(_minion_configuration, actor, target_cell.get_position())
 			target_cell.get_objects().append(minion)
+			minion.spawn()

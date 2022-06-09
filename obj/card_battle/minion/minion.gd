@@ -26,6 +26,10 @@ func apply_damage(damage: int):
 	_current_health = clamp(_current_health - damage, 0, _max_health)
 
 
+func spawn():
+	pass
+
+
 func _init(configuration: CardBattleMinionConfiguration, owner: CardBattleHero,
 		position: CardBattleField.Cell):
 	_owner = owner

@@ -1,50 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://bptyo4acexbgm"]
+[gd_scene load_steps=6 format=3 uid="uid://btijmwyeuv7vw"]
 
-[ext_resource type="PackedScene" uid="uid://0vkabsmi5mk3" path="res://obj/card_battle/ui/character_info/character_info.tscn" id="1_cepv7"]
-[ext_resource type="PackedScene" path="res://obj/card_battle/ui/battle_field/battle_field.tscn" id="2_c46e4"]
-[ext_resource type="PackedScene" uid="uid://c5mv61awxomkm" path="res://obj/card_battle/ui/cards_list/cards_list.tscn" id="3_fbjvv"]
-[ext_resource type="Script" path="res://system/card_battle/duel_starter.gd" id="4_51dor"]
+[ext_resource type="PackedScene" uid="uid://cdi76rdok4a0f" path="res://obj/card_battle/duel/card_duel_layout.tscn" id="1_ukgr8"]
+[ext_resource type="PackedScene" uid="uid://b2ncprnqsp5oq" path="res://obj/world_investigation/character/character.tscn" id="2_njudw"]
+[ext_resource type="Script" path="res://obj/world_investigation/ui/joystick.gd" id="3_qusk8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m5ymu"]
+
+[sub_resource type="NoiseTexture" id="NoiseTexture_l4yfj"]
+width = 64
+height = 64
 
 [node name="Main" type="Node"]
 
-[node name="CardDuelLayout" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Location" type="Node2D" parent="."]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CardDuelLayout"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Character" parent="Location" instance=ExtResource( "2_njudw" )]
 
-[node name="Character" parent="CardDuelLayout/VBoxContainer" instance=ExtResource( "1_cepv7" )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 540.0
-offset_bottom = 100.0
+[node name="Opponent" type="Area2D" parent="Location"]
+position = Vector2(414, 497)
+collision_mask = 0
+monitoring = false
 
-[node name="BattleField" parent="CardDuelLayout/VBoxContainer" instance=ExtResource( "2_c46e4" )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_top = 104.0
-offset_right = 540.0
-offset_bottom = 702.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Location/Opponent"]
+shape = SubResource( "CircleShape2D_m5ymu" )
 
-[node name="Character2" parent="CardDuelLayout/VBoxContainer" instance=ExtResource( "1_cepv7" )]
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 706.0
-offset_right = 540.0
-offset_bottom = 806.0
+[node name="CardDuelLayout" parent="." instance=ExtResource( "1_ukgr8" )]
+visible = false
 
-[node name="Cards" parent="CardDuelLayout/VBoxContainer" instance=ExtResource( "3_fbjvv" )]
-offset_top = 810.0
-offset_bottom = 960.0
+[node name="HUD" type="Control" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="DuelStarter" type="Node" parent="."]
-script = ExtResource( "4_51dor" )
+[node name="Joystick" type="Control" parent="HUD"]
+offset_left = 283.0
+offset_top = 391.0
+offset_right = 323.0
+offset_bottom = 431.0
+script = ExtResource( "3_qusk8" )
+_max_drag_distance = 200.0
+
+[node name="TextureButton" type="TextureButton" parent="HUD"]
+offset_left = 228.0
+offset_top = 416.0
+offset_right = 740.0
+offset_bottom = 928.0
+texture_normal = SubResource( "NoiseTexture_l4yfj" )
+
+[connection signal="output_updated" from="HUD/Joystick" to="Location/Character" method="update_move_input"]
+[connection signal="pressed" from="HUD/TextureButton" to="Location/Character" method="interact"]

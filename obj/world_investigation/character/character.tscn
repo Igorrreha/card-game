@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2ncprnqsp5oq"]
+
+[ext_resource type="Script" path="res://obj/world_investigation/character/character.gd" id="1_m35mn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gpvv2"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uxv0k"]
+radius = 200.0
+
+[sub_resource type="NoiseTexture" id="NoiseTexture_q7481"]
+width = 32
+height = 32
+
+[node name="Character" type="CharacterBody2D"]
+motion_mode = 1
+moving_platform_apply_velocity_on_leave = 2
+script = ExtResource( "1_m35mn" )
+_interaction_area_path = NodePath("InteractionArea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( "CircleShape2D_gpvv2" )
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource( "CircleShape2D_uxv0k" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource( "NoiseTexture_q7481" )
